@@ -15,10 +15,11 @@ const CompanyListPage = () => {
      // Define the columns
      const columns = React.useMemo(
       () => [
-        { Header: 'ID', accessor: 'id' },
-        { Header: 'Name', accessor: 'name' },
-        { Header: 'Age', accessor: 'age' },
-        { Header: 'City', accessor: 'city' },
+        { Header: '#', accessor: 'id' },
+        { Header: 'Company', accessor: 'company' },
+        { Header: 'Projects', accessor: 'projects' },
+        { Header: 'Status', accessor: 'status' },
+        {Header:'Net Ammount', accessor: 'netAmmount'},
       ],
       []
     );
@@ -105,7 +106,9 @@ const CompanyListPage = () => {
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map(column => (
                 <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                
               ))}
+              <th>Action</th>
             </tr>
           ))}
         </thead>
@@ -116,7 +119,13 @@ const CompanyListPage = () => {
               <tr {...row.getRowProps()}>
                 {row.cells.map(cell => (
                   <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                 
                 ))}
+                 <td className='flex gap-4'> 
+                <button >View</button>
+                <button >Edit</button>
+                <button >Delete</button>
+              </td> 
               </tr>
             );
           })}
