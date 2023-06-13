@@ -4,22 +4,65 @@ import { useTable, useFilters, useGlobalFilter, usePagination } from 'react-tabl
 
 const CompanyListPage = () => {
 
+  // Fatch Data
     const [data, setData] = useState([]);
     useEffect(() => {
       fetch("data.json")
         .then((res) => res.json())
         .then((data) => setData(data));
     }, []);
+
+
+    const handleView = (row) => {
+      // Handle View button click here
+      console.log("View button clicked for ID:", row);
+    };
+
+    const handleEdit = (row) => {
+      // Handle Edit button click here
+      console.log("Edit button clicked for ID:", row);
+    };
+
+    const handleDelete = (id) => {
+      // Handle Delete button click here
+      console.log("Delete button clicked for ID:", id);
+    };
   
   
      // Define the columns
      const columns = React.useMemo(
       () => [
-        { Header: '#', accessor: 'id' },
-        { Header: 'Company', accessor: 'company' },
+        { Header: '#', accessor: 'sl'},
+        { Header: 'Company', accessor: 'company', accessor:"email",accessor:"img",
+        Cell: ({ row }) => (
+          <div className='flex'>
+            <div  className="avatar"> 
+            <div className="w-12 rounded-full">
+            <img src={row.original.img} alt={row.original.company} className="company-image" />
+            </div>
+            </div>
+            <div className="company-details">
+              <p className="company-name">{row.original.company}</p>
+              <p className="company-email">{row.original.email}</p>
+            </div>
+          </div>
+        ),
+      }, 
         { Header: 'Projects', accessor: 'projects' },
         { Header: 'Status', accessor: 'status' },
         {Header:'Net Ammount', accessor: 'netAmmount'},
+        {
+          Header: 'Actions',
+          accessor: 'id',
+          Cell: ({ value }) => (
+            <div className='flex gap-4'>
+              <button onClick={() => handleView(value)}>View</button>
+              <button onClick={() => handleEdit(value)}>Edit</button>
+              <button onClick={() => handleDelete(value)}>Delete</button>
+            </div>
+          ),
+        },
+        
       ],
       []
     );
@@ -108,11 +151,10 @@ const CompanyListPage = () => {
                 <th {...column.getHeaderProps()}>{column.render('Header')}</th>
                 
               ))}
-              <th>Action</th>
             </tr>
           ))}
         </thead>
-        <tbody {...getTableBodyProps()}>
+        <tbody className='text-gray-600' {...getTableBodyProps()}>
           {page.map(row => {
             prepareRow(row);
             return (
@@ -121,11 +163,6 @@ const CompanyListPage = () => {
                   <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                  
                 ))}
-                 <td className='flex gap-4'> 
-                <button >View</button>
-                <button >Edit</button>
-                <button >Delete</button>
-              </td> 
               </tr>
             );
           })}
