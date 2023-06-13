@@ -7,7 +7,6 @@ const Main = () => {
     return (
     <div>
       <Navbar />
-      <CompanyListPage></CompanyListPage>
       <Outlet/>
     </div>
     );
