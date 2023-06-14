@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 const ProjectFrom = (props) => {
-  const { register } = props;
+  const { register, isVisible } = props;
 
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -25,7 +25,7 @@ const ProjectFrom = (props) => {
       <h1 className="text-xl">New Project: Project Information</h1>
       <div className="mb-6 relative my-6">
         <input
-          {...register("ProjectName", { required: true })}
+          {...register("ProjectName", { required: isVisible })}
           type="Text"
           id="ProjectName"
           className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -43,7 +43,7 @@ const ProjectFrom = (props) => {
       <div class="grid gap-6 mb-6 md:grid-cols-2">
         <div className="relative">
           <input
-            {...register("projectStreetAdd1", { required: true })}
+            {...register("projectStreetAdd1", { required: isVisible })}
             type="text"
             id="projectStreetAdd1"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -61,7 +61,7 @@ const ProjectFrom = (props) => {
           <input
             type="text"
             id="projectStreetAdd2"
-            {...register("projectStreetAdd2", { required: true })}
+            {...register("projectStreetAdd2", { required: isVisible })}
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Street Address 2"
             required
@@ -75,7 +75,7 @@ const ProjectFrom = (props) => {
         </div>
         <div className="relative">
           <input
-            {...register("ProjectCity", { required: true })}
+            {...register("ProjectCity", { required: isVisible })}
             type="text"
             id="ProjectCity"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -91,7 +91,7 @@ const ProjectFrom = (props) => {
         </div>
         <div className="relative">
           <input
-            {...register("projectStage", { required: true })}
+            {...register("projectStage", { required: isVisible })}
             type="text"
             id="Stage"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -109,7 +109,7 @@ const ProjectFrom = (props) => {
       <div class="grid gap-6 mb-6 md:grid-cols-2">
         <div className="relative">
           <input
-            {...register("projectZipCode", { required: true })}
+            {...register("projectZipCode", { required: isVisible })}
             type="text"
             id="projectZipCode"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -127,7 +127,7 @@ const ProjectFrom = (props) => {
           <input
             type="text"
             id="projectCountry"
-            {...register("projectCountry", { required: true })}
+            {...register("projectCountry", { required: isVisible })}
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Country"
             required
@@ -141,7 +141,7 @@ const ProjectFrom = (props) => {
         </div>
         <div>
           <select
-            {...register("SelectType", { required: true })}
+            {...register("SelectType", { required: isVisible })}
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             value={selectedOption}
             onChange={handleOptionChange}
@@ -154,7 +154,7 @@ const ProjectFrom = (props) => {
         </div>
         <div className="relative">
           <input
-            {...register("projectSQFT", { required: true })}
+            {...register("projectSQFT", { required: isVisible })}
             type="text"
             id="projectSQFT"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -174,7 +174,7 @@ const ProjectFrom = (props) => {
       <div class="grid gap-6 mb-6 md:grid-cols-3">
         <div className="relative">
           <input
-            {...register("projectManagerName", { required: true })}
+            {...register("projectManagerName", { required: isVisible })}
             type="text"
             id="projectManagerName"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -192,7 +192,7 @@ const ProjectFrom = (props) => {
           <input
             type="Email"
             id="projectManagerEmail"
-            {...register("projectManagerEmail", { required: true })}
+            {...register("projectManagerEmail", { required: isVisible })}
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Email"
             required
@@ -206,7 +206,7 @@ const ProjectFrom = (props) => {
         </div>
         <div className="relative">
           <input
-            {...register("ProjectManagerPhone", { required: true })}
+            {...register("ProjectManagerPhone", { required: isVisible })}
             type="text"
             id="ProjectManagerPhone"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -224,7 +224,7 @@ const ProjectFrom = (props) => {
       <div class="grid gap-6 mb-6 md:grid-cols-3">
         <div className="relative">
           <input
-            {...register("asstProjectManagerName", { required: true })}
+            {...register("asstProjectManagerName", { required: isVisible })}
             type="text"
             id="asstProjectManagerName"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -242,7 +242,7 @@ const ProjectFrom = (props) => {
           <input
             type="Email"
             id="AsstProjectManagerEmail"
-            {...register("AsstProjectManagerEmail", { required: true })}
+            {...register("AsstProjectManagerEmail", { required: isVisible })}
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Email"
             required
@@ -256,7 +256,7 @@ const ProjectFrom = (props) => {
         </div>
         <div className="relative">
           <input
-            {...register("asstProjectManagerPhone", { required: true })}
+            {...register("asstProjectManagerPhone", { required: isVisible })}
             type="text"
             id="asstProjectManagerPhone"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -274,7 +274,7 @@ const ProjectFrom = (props) => {
       <div class="grid gap-6 mb-6 md:grid-cols-3">
         <div className="relative">
           <input
-            {...register("leadSuperintendentName", { required: true })}
+            {...register("leadSuperintendentName", { required: isVisible })}
             type="text"
             id="leadSuperintendentName"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -292,7 +292,7 @@ const ProjectFrom = (props) => {
           <input
             type="Email"
             id="leadSuperintendentEamil"
-            {...register("leadSuperintendentEamil", { required: true })}
+            {...register("leadSuperintendentEamil", { required: isVisible })}
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Email"
             required
@@ -306,7 +306,7 @@ const ProjectFrom = (props) => {
         </div>
         <div className="relative">
           <input
-            {...register("leadSuperintendentPhone", { required: true })}
+            {...register("leadSuperintendentPhone", { required: isVisible })}
             type="text"
             id="leadSuperintendentPhone"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -324,7 +324,7 @@ const ProjectFrom = (props) => {
       <div class="grid gap-6 mb-6 md:grid-cols-3">
         <div className="relative">
           <input
-            {...register("superintendentName", { required: true })}
+            {...register("superintendentName", { required: isVisible })}
             type="text"
             id="superintendentName"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -342,7 +342,7 @@ const ProjectFrom = (props) => {
           <input
             type="Email"
             id="superintendentEamil"
-            {...register("superintendentEamil", { required: true })}
+            {...register("superintendentEamil", { required: isVisible })}
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Email"
             required
@@ -356,7 +356,7 @@ const ProjectFrom = (props) => {
         </div>
         <div className="relative">
           <input
-            {...register("superintendentPhone", { required: true })}
+            {...register("superintendentPhone", { required: isVisible })}
             type="text"
             id="superintendentPhone"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -375,7 +375,7 @@ const ProjectFrom = (props) => {
       <div class="grid gap-6 mb-6 md:grid-cols-3">
         <div className="relative">
           <input
-            {...register("contractAmmount", { required: true })}
+            {...register("contractAmmount", { required: isVisible })}
             type="text"
             id="contractAmmount"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -391,7 +391,7 @@ const ProjectFrom = (props) => {
         </div>
         <div className="relative mb-3">
           <input
-            {...register("projectStartDate", { required: true })}
+            {...register("projectStartDate", { required: isVisible })}
             type="date"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Select a date"
@@ -405,7 +405,7 @@ const ProjectFrom = (props) => {
         </div>
         <div className="relative">
           <input
-            {...register("projectEndDate", { required: true })}
+            {...register("projectEndDate", { required: isVisible })}
             type="date"
             className="block px-2.5 pb-2.5 border pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Select a date"
@@ -427,7 +427,7 @@ const ProjectFrom = (props) => {
             Is this is a prevaling wage project?
           </label>
           <select
-            {...register("prevaling", { required: true })}
+            {...register("prevaling", { required: isVisible })}
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={prevaling}
             onChange={handleSelectPrevaling}
@@ -445,7 +445,7 @@ const ProjectFrom = (props) => {
             Is this tax exempt project?
           </label>
           <select
-            {...register("SelectedOptionsTax", { required: true })}
+            {...register("SelectedOptionsTax", { required: isVisible })}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={taxExempt}
             onChange={handleTax}

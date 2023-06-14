@@ -4,6 +4,7 @@ import ProjectFrom from "../ProjectFrom/ProjectFrom";
 
 const Register = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -138,11 +139,11 @@ const Register = () => {
             <div class="flex items-center h-5">
               <input
                 id="remember"
+                {...register("isProjectAdded", { required: isVisible })}
                 type="checkbox"
                 checked={isVisible}
                 onChange={() => setIsVisible(!isVisible)}
                 class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                required
               />
             </div>
             <label
@@ -153,9 +154,13 @@ const Register = () => {
                 Add New Project
               </p>
             </label>
-            <div></div>
           </div>
-          {isVisible && <ProjectFrom register={register}></ProjectFrom>}
+          {isVisible && (
+            <ProjectFrom
+              isVisible={isVisible}
+              register={register}
+            ></ProjectFrom>
+          )}
         </div>
 
         <button
