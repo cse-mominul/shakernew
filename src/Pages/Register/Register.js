@@ -14,7 +14,7 @@ const Register = () => {
 
   console.log(watch("example"));
   return (
-    <div>
+    <div className="my-6 mx-12">
       <div className="bg-[#0277BD]">
         <h1 className="text-white px-4 py-4">Register New Company</h1>
       </div>
