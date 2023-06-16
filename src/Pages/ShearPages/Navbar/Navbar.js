@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar  bg-[#F1F5F9]">
+    <div className="navbar  bg-[#4338CA]">
       <div className="navbar-start">
         <div className="dropdown lg:hidden">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -31,7 +31,7 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li className="link-underline link-underline-black2">
-                <Link to="/services">Companies</Link>
+                <Link to="/companies">Companies</Link>
               </li>
               <li className="link-underline link-underline-black3">
                 <Link to="/products">Suppliers</Link>
@@ -52,16 +52,14 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <Link to="/" className="pr-96">
-          <p className="text-sky-500  font-bold text-xl  pl-6">
-            Herman Cleaners
-          </p>
+          <p className="text-white  font-bold text-xl  pl-6">Herman Cleaners</p>
         </Link>
-        <ul className="flex gap-4 text-[#70797E] ">
+        <ul className="flex gap-4 text-white ">
           <li className="link-underline hover:text-black link-underline-black">
             <Link to="/">Home</Link>
           </li>
           <li className="link-underline hover:text-black link-underline-black2">
-            <Link to="/services">Companies</Link>
+            <Link to="/companies">Companies</Link>
           </li>
           <li className="link-underline hover:text-black link-underline-black3">
             <Link to="/products">Suppliers</Link>

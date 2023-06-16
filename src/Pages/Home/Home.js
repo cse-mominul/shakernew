@@ -4,7 +4,7 @@ import CompanyListPage from "../CompanyLIstPage/CompanyListPage";
 const Home = () => {
   return (
     <div>
-      <CompanyListPage></CompanyListPage>
+      <h1>This is home</h1>
     </div>
   );
 };

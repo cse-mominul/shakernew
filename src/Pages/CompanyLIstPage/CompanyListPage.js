@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   useTable,
   useFilters,
@@ -103,15 +104,19 @@ const CompanyListPage = () => {
 
   const { globalFilter, pageIndex, pageSize } = state;
   return (
-    <div className="mx-12">
-      <div className="bg-gray-600 flex justify-between">
+    <div className="mx-12 my-6">
+      <div className="bg-[#0277BD] flex justify-between">
         <div className="py-4">
-          <p className="text-xl px-4 py-2  text-white">Company LIst</p>
+          <p className="px-4 text-white">Company LIst</p>
         </div>
-        <div className="py-4 px-4">
-          <button class="bg-[#05A6F6] hover:bg-sky-800 text-white font-semibold hover:text-white py-2 px-2 border border-blue-500 hover:border-transparent rounded">
+        <div className="py-2 px-4">
+          <Link
+            to="/projects"
+            className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button"
+          >
             Add New Company
-          </button>
+          </Link>
         </div>
       </div>
       <>

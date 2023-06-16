@@ -3,6 +3,7 @@ import Main from "../../Layout/Main/Main";
 import Home from "../../Pages/Home/Home";
 import Register from "../../Pages/Register/Register";
 import ErrorPage from "../../Pages/ShearPages/ErrorPage/ErrorPage";
+import CompanyListPage from "../../Pages/CompanyLIstPage/CompanyListPage";
 
 const routes = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const routes = createBrowserRouter([
         element: <Home></Home>,
       },
       { path: "/projects", element: <Register></Register> },
+      { path: "/companies", element: <CompanyListPage></CompanyListPage> },
     ],
   },
 ]);
