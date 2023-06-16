@@ -103,7 +103,7 @@ const CompanyListPage = () => {
 
   const { globalFilter, pageIndex, pageSize } = state;
   return (
-    <div className="mx-4">
+    <div className="mx-12">
       <div className="bg-gray-600 flex justify-between">
         <div className="py-4">
           <p className="text-xl px-4 py-2  text-white">Company LIst</p>
