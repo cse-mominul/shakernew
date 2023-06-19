@@ -49,7 +49,7 @@ const Home = () => {
       </div>
       <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pt-12 pb-12 lg:px-32">
         {/* Fast Service */}
-        <div className="  h-56 bg-gray-300 bg-[#F8FAFC] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <IoIosRocket className="text-rose-500 text-5xl mx-4 my-4"></IoIosRocket>
@@ -79,7 +79,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* 24/7 Support */}
-        <div className="  h-56 bg-gray-300 bg-[#F8FAFC]transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <AiFillClockCircle className="text-rose-500 text-5xl mx-4 my-4"></AiFillClockCircle>
@@ -94,7 +94,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Quality Tools */}
-        <div className="  h-56 bg-gray-300 bg-[#F8FAFC] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <BsTools className="text-rose-500 text-5xl mx-4 my-4"></BsTools>
@@ -109,7 +109,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Full Support */}
-        <div className="  h-56 bg-gray-300 bg-[#F8FAFC] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <BsFillCalendarCheckFill className=" text-rose-500 text-5xl mx-4 my-4"></BsFillCalendarCheckFill>
@@ -124,7 +124,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Full Support */}
-        <div className="  h-56 bg-gray-300 bg-[#F8FAFC] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <BsFillCalendarCheckFill className=" text-rose-500 text-5xl mx-4 my-4"></BsFillCalendarCheckFill>
