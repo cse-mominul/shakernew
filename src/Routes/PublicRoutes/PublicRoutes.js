@@ -4,6 +4,7 @@ import Home from "../../Pages/Home/Home";
 import Register from "../../Pages/Register/Register";
 import ErrorPage from "../../Pages/ShearPages/ErrorPage/ErrorPage";
 import CompanyListPage from "../../Pages/CompanyLIstPage/CompanyListPage";
+import Login from "../../Pages/Login/Login";
 
 const routes = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const routes = createBrowserRouter([
       },
       { path: "/projects", element: <Register></Register> },
       { path: "/companies", element: <CompanyListPage></CompanyListPage> },
+      { path: "/login", element: <Login></Login> },
     ],
   },
 ]);

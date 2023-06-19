@@ -17,7 +17,7 @@ const ErrorPage = () => {
               </p>
               <Link
                 to="/"
-                class="sm:w-full lg:w-auto my-2 border rounded md py-4 px-8 text-center bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50"
+                class="sm:w-full lg:w-auto my-2 border rounded md py-4 px-8 text-center bg-rose-500 text-white hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50"
               >
                 Take me Home
               </Link>

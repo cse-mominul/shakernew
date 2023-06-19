@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 import {
   useTable,
   useFilters,
@@ -104,15 +105,15 @@ const CompanyListPage = () => {
 
   const { globalFilter, pageIndex, pageSize } = state;
   return (
-    <div className="mx-12 my-6">
-      <div className="bg-[#0277BD] flex justify-between">
+    <div className="mx-12 my-6 rounded bg-[#F8FAFC] ">
+      <div className="flex justify-between">
         <div className="py-4">
-          <p className="px-4 text-white">Company LIst</p>
+          <p className="px-4 text-red-500 text-3xl">#Company List</p>
         </div>
-        <div className="py-2 px-4">
+        <div className="py-4 px-4">
           <Link
             to="/projects"
-            className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            className="bg-rose-500 text-white active:bg-rose-500 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button"
           >
             Add New Company
@@ -124,6 +125,7 @@ const CompanyListPage = () => {
           <div className="text-gray-600">
             Go to page :{" "}
             <input
+              className="mx-4 text-center"
               type="number"
               defaultValue={pageIndex + 1}
               onChange={(e) => {
@@ -141,19 +143,28 @@ const CompanyListPage = () => {
               }}
             >
               {[5, 10, 20].map((pageSize) => (
-                <option key={pageSize} value={pageSize}>
+                <option className="bg-white" key={pageSize} value={pageSize}>
                   Show {pageSize}
                 </option>
               ))}
             </select>
           </div>
-          <input
-            type="text"
-            value={globalFilter || ""}
-            onChange={(e) => setGlobalFilter(e.target.value)}
-            placeholder="Search..."
-          />
+          <div className="relative flex w-full sm:w-7/12 md:w-3/12 px-2 flex-wrap items-stretch lg:ml-auto">
+            <div className="flex">
+              <span className="font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-rose-600 rounded-full text-sm  items-center rounded-r-none pl-2 py-1 text-pink-800 border-r-0 placeholder-pink-300">
+                <FaSearch></FaSearch>
+              </span>
+            </div>
+            <input
+              type="text"
+              value={globalFilter || ""}
+              onChange={(e) => setGlobalFilter(e.target.value)}
+              placeholder="Search..."
+              class="px-2 py-1 h-8 border border-solid  border-pink-600 rounded-full text-sm leading-snug text-pink-700 shadow-none outline-none focus:outline-none w-full font-normal rounded-l-none flex-1 border-l-0 placeholder-pink-300"
+            />
+          </div>
         </div>
+
         <div className="overflow-x-auto">
           <table className="table" {...getTableProps()}>
             <thead>
@@ -190,28 +201,28 @@ const CompanyListPage = () => {
           </div>
           <div className="flex gap-4 px-4 text-gray-600">
             <button
-              className="hover:text-sky-800 "
+              className="hover:text-red-500 "
               onClick={() => gotoPage(0)}
               disabled={!canPreviousPage}
             >
               {"Home"}
             </button>
             <button
-              className="hover:text-sky-800 "
+              className="hover:text-red-500 "
               onClick={() => nextPage()}
               disabled={!canNextPage}
             >
               {"Next"}
             </button>
             <button
-              className="hover:text-sky-800 "
+              className="hover:text-red-500 "
               onClick={() => previousPage()}
               disabled={!canPreviousPage}
             >
               {"Previous"}
             </button>
             <button
-              className="hover:text-sky-800 "
+              className="hover:text-red-500 "
               onClick={() => gotoPage(pageCount - 1)}
               disabled={!canNextPage}
             >

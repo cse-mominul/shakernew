@@ -15,9 +15,9 @@ const Register = () => {
 
   console.log(watch("example"));
   return (
-    <div className="my-6 mx-12">
-      <div className="bg-[#0277BD]">
-        <h1 className="text-white px-4 py-4">Register New Company</h1>
+    <div className="my-6  bg-[#F8FAFC]  mx-12">
+      <div className="py-4">
+        <p className="px-4 text-red-500 text-3xl">#Registar New Company</p>
       </div>
       <form className="my-4 mx-4" onSubmit={handleSubmit(onSubmit)}>
         <div class="mb-6">
@@ -162,10 +162,9 @@ const Register = () => {
             ></ProjectFrom>
           )}
         </div>
-
         <button
           type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="mx-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Submit
         </button>
