@@ -49,7 +49,7 @@ const Home = () => {
       </div>
       <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pt-12 pb-12 lg:px-32">
         {/* Fast Service */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F8FAFC] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <IoIosRocket className="text-rose-500 text-5xl mx-4 my-4"></IoIosRocket>
@@ -79,7 +79,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* 24/7 Support */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F8FAFC]transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <AiFillClockCircle className="text-rose-500 text-5xl mx-4 my-4"></AiFillClockCircle>
@@ -94,7 +94,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Quality Tools */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F8FAFC] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <BsTools className="text-rose-500 text-5xl mx-4 my-4"></BsTools>
@@ -109,7 +109,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Full Support */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F8FAFC] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <BsFillCalendarCheckFill className=" text-rose-500 text-5xl mx-4 my-4"></BsFillCalendarCheckFill>
@@ -124,7 +124,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Full Support */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-[#F8FAFC] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
           <div className="flex">
             <div>
               <BsFillCalendarCheckFill className=" text-rose-500 text-5xl mx-4 my-4"></BsFillCalendarCheckFill>
@@ -293,9 +293,399 @@ const Home = () => {
           <img src="https://i.ibb.co/mSMJ0wW/image.png"></img>
         </div>
         <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pt-12 pb-12 lg:px-32">
-          <div className="w-56 h-56 bg-gray-300">Box 1</div>
-          <div className="w-56 h-56 bg-gray-300">Box 2</div>
-          <div className="w-56 h-56 bg-gray-300">Box 3</div>
+          {/* COMMERCIAL PLAN */}
+          <div class=" p-4 bg-[#3B71CA] hover:shadow-lg transition duration-500 ease-in-out hover:bg-rose-500 rounded-2xl dark:bg-gray-800">
+            <div class="text-center text-white">
+              <p class="mb-4 text-3xl font-medium">Commercial Plan</p>
+              <div className=" flex gap-2 justify-center">
+                <p class="flex flex-col text-5xl font-bold">$99</p>
+                <span class="text-sm  font-thin text-right">month</span>
+              </div>
+            </div>
+            <p class="mt-4 text-white text-md">Plan include :</p>
+            <ul class="w-full mt-6 mb-6 text-sm text-white">
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                24/7 customer support
+              </li>
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                Own custom Tailwind styles
+              </li>
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                Unlimited Templates
+              </li>
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                Free premium dashboard
+              </li>
+
+              <li class="mb-3 flex items-center opacity-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  class="w-6 h-6 mr-2"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                My wife
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="w-full px-3 py-3 text-sm text-indigo-500 bg-white rounded-lg shadow hover:bg-gray-100 "
+            >
+              Choose plan
+            </button>
+          </div>
+          {/* FLOORING PLAN */}
+          <div class=" p-4 bg-[#3B71CA]  hover:shadow-lg transition duration-500 ease-in-out hover:bg-rose-500 rounded-2xl dark:bg-gray-800">
+            <div class="text-center text-white">
+              <p class="mb-4 text-3xl font-medium"> Flooring Plan</p>
+              <div className=" flex gap-2 justify-center">
+                <p class="flex flex-col text-5xl font-bold">$79</p>
+                <span class="text-sm  font-thin text-right">month</span>
+              </div>
+            </div>
+            <p class="mt-4 text-white text-md">Plan include :</p>
+            <ul class="w-full mt-6 mb-6 text-sm text-white">
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                24/7 customer support
+              </li>
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                Own custom Tailwind styles
+              </li>
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                Unlimited Templates
+              </li>
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                Free premium dashboard
+              </li>
+
+              <li class="mb-3 flex items-center opacity-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  class="w-6 h-6 mr-2"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                My wife
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="w-full px-3 py-3 text-sm text-indigo-500 bg-white rounded-lg shadow hover:bg-gray-100 "
+            >
+              Choose plan
+            </button>
+          </div>
+          {/* Exterior Plan*/}
+          <div class=" p-4 bg-[#3B71CA] hover:shadow-lg transition duration-500 ease-in-out hover:bg-rose-500 rounded-2xl dark:bg-gray-800">
+            <div class="text-center text-white">
+              <p class="mb-4 text-3xl font-medium">Exterior Plan</p>
+              <div className=" flex gap-2 justify-center">
+                <p class="flex flex-col text-5xl font-bold">$129</p>
+                <span class="text-sm  font-thin text-right">month</span>
+              </div>
+            </div>
+            <p class="mt-4 text-white text-md">Plan include :</p>
+            <ul class="w-full mt-6 mb-6 text-sm text-white">
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                24/7 customer support
+              </li>
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                Own custom Tailwind styles
+              </li>
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                Unlimited Templates
+              </li>
+              <li class="mb-3 flex items-center ">
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  stroke="currentColor"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                Free premium dashboard
+              </li>
+
+              <li class="mb-3 flex items-center opacity-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="6"
+                  class="w-6 h-6 mr-2"
+                  fill="white"
+                  viewBox="0 0 1792 1792"
+                >
+                  <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
+                </svg>
+                My wife
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="w-full px-3 py-3 text-sm text-indigo-500 bg-white rounded-lg shadow hover:bg-gray-100 "
+            >
+              Choose plan
+            </button>
+          </div>
+        </div>
+      </section>
+      {/* Latest Project */}
+      <section>
+        <h3 className="text-3xl text-center mt-12 pt-6">Latest Project</h3>
+        <h3 className="text-center text-gray-400 my-4">
+          Lorem Ipsum is simply dummy text ofthe anadthe printing of typesetting{" "}
+          <br />
+          industrydummy texat the dummy text ofthe anadthe printing dummy
+        </h3>
+        <div className=" flex justify-center content-center">
+          <img src="https://i.ibb.co/mSMJ0wW/image.png"></img>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 my-12 gap-4">
+          <div class="grid gap-4">
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/*Our Expert  */}
+      <section>
+        <h3 className="text-3xl text-center mt-12 pt-6">Our Expert</h3>
+        <h3 className="text-center text-gray-400 my-4">
+          Lorem Ipsum is simply dummy text ofthe anadthe printing of typesetting{" "}
+          <br />
+          industrydummy texat the dummy text ofthe anadthe printing dummy
+        </h3>
+        <div className=" flex justify-center content-center">
+          <img src="https://i.ibb.co/mSMJ0wW/image.png"></img>
+        </div>
+        <div className="flex flex-wrap justify-center items-center h-screen">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 h-32 sm:h-48 md:h-64 lg:h-72 xl:h-96 bg-gray-300 m-4">
+            Box 1
+          </div>
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 h-32 sm:h-48 md:h-64 lg:h-72 xl:h-96 bg-gray-300 m-4">
+            Box 2
+          </div>
         </div>
       </section>
     </div>
