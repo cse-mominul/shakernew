@@ -16,7 +16,7 @@
     "company": "Microsoft",
     "email": "google@gmail.com",
     "projects": 25,
-    "status": "Active",
+    "status": "Inactive",
     "netAmmount": "$1234"
   },
   {
@@ -64,7 +64,7 @@
     "id": 7,
     "img": "https://image.similarpng.com/very-thumbnail/2020/12/Black-google-logo-design-on-transparent-background-PNG.png",
     "company": "Google",
-    "email": "google@gmail.com",
+    "email": "kayes@gmail.com",
     "projects": 25,
     "status": "Active",
     "netAmmount": "$1234"
@@ -74,7 +74,7 @@
     "id": 8,
     "img": "https://image.similarpng.com/very-thumbnail/2020/12/Black-google-logo-design-on-transparent-background-PNG.png",
     "company": "Google",
-    "email": "google@gmail.com",
+    "email": "momin@gmail.com",
     "projects": 25,
     "status": "Active",
     "netAmmount": "$1234"

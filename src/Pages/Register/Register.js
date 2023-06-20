@@ -45,7 +45,7 @@ const Register = () => {
         <div class="mb-6">
           <label
             for="Name"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            class="block mb-2 text-sm font-medium text-gray-900 "
           >
             Company Name
           </label>
@@ -53,7 +53,7 @@ const Register = () => {
             {...register("CompanyName", { required: true })}
             type="Text"
             id="Name"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
             placeholder="Name"
             required
           />
@@ -61,7 +61,7 @@ const Register = () => {
         <div class="mb-6">
           <label
             for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            class="block mb-2 text-sm font-medium text-gray-900 "
           >
             Email Address
           </label>
@@ -69,7 +69,7 @@ const Register = () => {
             type="email"
             id="email"
             {...register("email", { required: true })}
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
             placeholder="Email"
             required
           />
@@ -77,7 +77,7 @@ const Register = () => {
         <div class="mb-6">
           <label
             for="phone"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            class="block mb-2 text-sm font-medium text-gray-900 "
           >
             Phone Number
           </label>
@@ -85,7 +85,7 @@ const Register = () => {
             type="phone"
             id="phone"
             {...register("phone", { required: true })}
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
             placeholder="Phone"
             required
           />
@@ -94,7 +94,7 @@ const Register = () => {
           <div>
             <label
               for="streetAdd1"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              class="block mb-2 text-sm font-medium text-gray-900 "
             >
               Street Address 1
             </label>
@@ -102,7 +102,7 @@ const Register = () => {
               {...register("streetAdd1", { required: true })}
               type="text"
               id="streetAdd1"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
               placeholder="Address 1"
               required
             />
@@ -110,7 +110,7 @@ const Register = () => {
           <div>
             <label
               for="streetAdd2"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              class="block mb-2 text-sm font-medium text-gray-900 "
             >
               Street Address 2
             </label>
@@ -118,7 +118,7 @@ const Register = () => {
               type="text"
               id="streetAdd2"
               {...register("streetAdd2", { required: true })}
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
               placeholder="Address 2"
               required
             />
@@ -126,7 +126,7 @@ const Register = () => {
           <div>
             <label
               for="city"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              class="block mb-2 text-sm font-medium text-gray-900 "
             >
               City
             </label>
@@ -134,7 +134,7 @@ const Register = () => {
               {...register("city", { required: true })}
               type="text"
               id="city"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
               placeholder="City"
               required
             />
@@ -142,7 +142,7 @@ const Register = () => {
           <div>
             <label
               for="country"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              class="block mb-2 text-sm font-medium text-gray-900 "
             >
               Country
             </label>
@@ -150,7 +150,7 @@ const Register = () => {
               {...register("country", { required: true })}
               type="text"
               id="country"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
               placeholder="Country Name"
               required
             />
@@ -165,7 +165,7 @@ const Register = () => {
                 type="checkbox"
                 checked={isVisible}
                 onChange={() => setIsVisible(!isVisible)}
-                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300  dark:focus:ring-blue-600 dark:ring-offset-gray-800"
               />
             </div>
             <label

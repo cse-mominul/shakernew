@@ -18,7 +18,7 @@ const Home = () => {
               </h1>
               <Link
                 to="/login"
-                className="mb-2 inline-block rounded bg-neutral-50 px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal text-neutral-800 shadow-[0_4px_9px_-4px_#cbcbcb] transition duration-150 ease-in-out hover:bg-neutral-100 hover:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] focus:bg-neutral-100 focus:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-200 active:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(251,251,251,0.3)] dark:hover:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.1),0_4px_18px_0_rgba(251,251,251,0.05)] dark:focus:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.1),0_4px_18px_0_rgba(251,251,251,0.05)] dark:active:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.1),0_4px_18px_0_rgba(251,251,251,0.05)] md:mr-2 md:mb-0"
+                className="mb-2 inline-block rounded bg-neutral-50 px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal text-neutral-800 shadow-[0_4px_9px_-4px_#cbcbcb] transition duration-150 ease-in-out hover:bg-neutral-100 hover:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] focus:bg-neutral-100 focus:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-200 active:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] md:mr-2 md:mb-0"
                 data-te-ripple-init
                 data-te-ripple-color="light"
                 role="button"
@@ -29,7 +29,7 @@ const Home = () => {
             <div className="mb-12 lg:mb-0">
               <img
                 src="https://i.ibb.co/bvK1DTy/pexels-polina-tankilevitch-4440533.jpg"
-                className="w-full rounded-lg shadow-lg dark:shadow-black/20"
+                className="w-full rounded-lg shadow-lg "
                 alt=""
               />
             </div>
@@ -49,7 +49,7 @@ const Home = () => {
       </div>
       <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pt-12 pb-12 lg:px-32">
         {/* Fast Service */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-gray-100 transition duration-300 ease-in-out hover:shadow-lg /30">
           <div className="flex">
             <div>
               <IoIosRocket className="text-rose-500 text-5xl mx-4 my-4"></IoIosRocket>
@@ -64,7 +64,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Secure Service */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-gray-100 transition duration-300 ease-in-out hover:shadow-lg ">
           <div className="flex">
             <div>
               <AiFillCheckCircle className="text-rose-500 text-5xl mx-4 my-4"></AiFillCheckCircle>
@@ -79,7 +79,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* 24/7 Support */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-gray-100 transition duration-300 ease-in-out hover:shadow-lg ">
           <div className="flex">
             <div>
               <AiFillClockCircle className="text-rose-500 text-5xl mx-4 my-4"></AiFillClockCircle>
@@ -94,7 +94,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Quality Tools */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-gray-100 transition duration-300 ease-in-out hover:shadow-lg ">
           <div className="flex">
             <div>
               <BsTools className="text-rose-500 text-5xl mx-4 my-4"></BsTools>
@@ -109,7 +109,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Full Support */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-gray-100 transition duration-300 ease-in-out hover:shadow-lg ">
           <div className="flex">
             <div>
               <BsFillCalendarCheckFill className=" text-rose-500 text-5xl mx-4 my-4"></BsFillCalendarCheckFill>
@@ -124,7 +124,7 @@ const Home = () => {
           <button className="my-12 mx-6">Learn More</button>
         </div>
         {/* Full Support */}
-        <div className="  h-56 bg-gray-300 bg-[#F6F8FA] transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+        <div className="  h-56 bg-gray-300 bg-gray-100 transition duration-300 ease-in-out hover:shadow-lg ">
           <div className="flex">
             <div>
               <BsFillCalendarCheckFill className=" text-rose-500 text-5xl mx-4 my-4"></BsFillCalendarCheckFill>
@@ -157,7 +157,7 @@ const Home = () => {
           <div class="w-100 mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl xl:px-32">
             <div class="grid items-center lg:grid-cols-2">
               <div class="mb-12 md:mt-12 lg:mt-0 lg:mb-0">
-                <div class="block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 lg:-mr-14 backdrop-blur-[30px]">
+                <div class="block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] :bg-[hsla(0,0%,5%,0.55)] md:px-12 lg:-mr-14 backdrop-blur-[30px]">
                   <h1 class="mt-2 mb-6 text-xl text-rose-500 font-bold tracking-tight md:text-2xl xl:text-3xl">
                     About our company
                   </h1>
@@ -180,7 +180,7 @@ const Home = () => {
               <div class="md:mb-12 lg:mb-0">
                 <img
                   src="https://i.ibb.co/D4HYnCM/pleased-lovely-woman-holds-cleaning-set-different-services-dressed-speacial-uniform.jpg"
-                  class="w-full rounded-lg shadow-lg dark:shadow-black/20"
+                  class="w-full rounded-lg shadow-lg "
                   alt=""
                 />
               </div>
@@ -207,13 +207,11 @@ const Home = () => {
             <div class="mb-6 flex justify-center">
               <img
                 src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
-                class="w-32 rounded-full shadow-lg dark:shadow-black/30"
+                class="w-32 rounded-full shadow-lg"
               />
             </div>
             <h5 class="mb-4 text-xl font-semibold">Maria Smantha</h5>
-            <h6 class="mb-4 font-semibold text-rose-500 dark:text-primary-500">
-              Web Developer
-            </h6>
+            <h6 class="mb-4 font-semibold text-rose-500">Web Developer</h6>
             <p class="mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -233,13 +231,11 @@ const Home = () => {
             <div class="mb-6 flex justify-center">
               <img
                 src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(2).jpg"
-                class="w-32 rounded-full shadow-lg dark:shadow-black/30"
+                class="w-32 rounded-full shadow-lg "
               />
             </div>
             <h5 class="mb-4 text-xl font-semibold">Lisa Cudrow</h5>
-            <h6 class="mb-4 font-semibold text-rose-500 dark:text-primary-500">
-              Graphic Designer
-            </h6>
+            <h6 class="mb-4 font-semibold text-rose-500 ">Graphic Designer</h6>
             <p class="mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -259,13 +255,11 @@ const Home = () => {
             <div class="mb-6 flex justify-center">
               <img
                 src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
-                class="w-32 rounded-full shadow-lg dark:shadow-black/30"
+                class="w-32 rounded-full shadow-lg "
               />
             </div>
             <h5 class="mb-4 text-xl font-semibold">Maria Smantha</h5>
-            <h6 class="mb-4 font-semibold text-rose-500 dark:text-rose-500">
-              Web Developer
-            </h6>
+            <h6 class="mb-4 font-semibold text-rose-500 ">Web Developer</h6>
             <p class="mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +288,7 @@ const Home = () => {
         </div>
         <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pt-12 pb-12 lg:px-32">
           {/* COMMERCIAL PLAN */}
-          <div class=" p-4 bg-[#3B71CA] hover:shadow-lg transition duration-500 ease-in-out hover:bg-rose-500 rounded-2xl dark:bg-gray-800">
+          <div class=" p-4 bg-[#3B71CA] hover:shadow-lg transition duration-500 ease-in-out hover:bg-rose-500 rounded-2xl">
             <div class="text-center text-white">
               <p class="mb-4 text-3xl font-medium">Commercial Plan</p>
               <div className=" flex gap-2 justify-center">
@@ -383,7 +377,7 @@ const Home = () => {
             </button>
           </div>
           {/* FLOORING PLAN */}
-          <div class=" p-4 bg-[#3B71CA]  hover:shadow-lg transition duration-500 ease-in-out hover:bg-rose-500 rounded-2xl dark:bg-gray-800">
+          <div class=" p-4 bg-[#3B71CA]  hover:shadow-lg transition duration-500 ease-in-out hover:bg-rose-500 rounded-2xl">
             <div class="text-center text-white">
               <p class="mb-4 text-3xl font-medium"> Flooring Plan</p>
               <div className=" flex gap-2 justify-center">
@@ -472,7 +466,7 @@ const Home = () => {
             </button>
           </div>
           {/* Exterior Plan*/}
-          <div class=" p-4 bg-[#3B71CA] hover:shadow-lg transition duration-500 ease-in-out hover:bg-rose-500 rounded-2xl dark:bg-gray-800">
+          <div class=" p-4 bg-[#3B71CA] hover:shadow-lg transition duration-500 ease-in-out hover:bg-rose-500 rounded-2xl">
             <div class="text-center text-white">
               <p class="mb-4 text-3xl font-medium">Exterior Plan</p>
               <div className=" flex gap-2 justify-center">

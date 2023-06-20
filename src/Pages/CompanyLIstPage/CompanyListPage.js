@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import { CiPower } from "react-icons/ci";
 import {
   useTable,
   useFilters,
@@ -69,7 +70,26 @@ const CompanyListPage = () => {
         ),
       },
       { Header: "Projects", accessor: "projects" },
-      { Header: "Status", accessor: "status" },
+      {
+        Header: "Status",
+        accessor: "status",
+        Cell: ({ value }) => {
+          const statusStyle = {
+            color: value === "Active" ? "green" : "red",
+          };
+
+          return (
+            <div className="flex gap-1" style={statusStyle}>
+              {value == "Active" ? (
+                <CiPower className="mt-1"></CiPower>
+              ) : (
+                <CiPower className="mt-1"></CiPower>
+              )}
+              {value}
+            </div>
+          );
+        },
+      },
       { Header: "Net Ammount", accessor: "netAmmount" },
       {
         Header: "Actions",
@@ -134,7 +154,7 @@ const CompanyListPage = () => {
 
   const { globalFilter, pageIndex, pageSize } = state;
   return (
-    <div className="mx-12 my-6 rounded bg-[#F8FAFC] ">
+    <div className="mx-12 my-6 rounded bg-[#F8FAFC]  ">
       <div className="flex justify-between">
         <div className="py-4">
           <p className="px-4 text-red-500 text-3xl">#Company List</p>
@@ -150,11 +170,11 @@ const CompanyListPage = () => {
         </div>
       </div>
       <>
-        <div className="px-4 py-4 flex justify-between">
+        <div className="px-4 py-4 flex justify-between ">
           <div className="text-gray-600">
             Go to page :{" "}
             <input
-              className="mx-4 text-center"
+              className="mx-4 text-center dark:bg-white"
               type="number"
               defaultValue={pageIndex + 1}
               onChange={(e) => {
@@ -172,7 +192,11 @@ const CompanyListPage = () => {
               }}
             >
               {[5, 10, 20].map((pageSize) => (
-                <option className="bg-white" key={pageSize} value={pageSize}>
+                <option
+                  className="dark:bg-white "
+                  key={pageSize}
+                  value={pageSize}
+                >
                   Show {pageSize}
                 </option>
               ))}
@@ -185,6 +209,7 @@ const CompanyListPage = () => {
               </span>
             </div>
             <input
+              className="bg-white"
               type="text"
               value={globalFilter || ""}
               onChange={(e) => setGlobalFilter(e.target.value)}
