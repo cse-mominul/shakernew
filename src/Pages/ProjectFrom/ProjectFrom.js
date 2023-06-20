@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { BsFillClipboardFill } from "react-icons/bs";
 const ProjectFrom = (props) => {
   const { register, isVisible } = props;
 
@@ -562,7 +563,7 @@ const ProjectFrom = (props) => {
               drop
             </p>
             <p class="text-xs text-gray-500 dark:text-gray-400">
-              SVG, PNG, JPG or GIF (MAX. 800x400px)
+              PNG, JPG or PDF (MAX. 2 mb)
             </p>
           </div>
           <input
@@ -582,7 +583,18 @@ const ProjectFrom = (props) => {
             <ul>
               {files.map((file, idx) => (
                 <li key={idx}>
-                  {file.name}
+                  <div className=" bg-rose-500">
+                    <div className="flex gap-4 justify-left my-6 mx-12">
+                      <BsFillClipboardFill className="mt-5 mx-2 text-3xl text-white"></BsFillClipboardFill>
+                      <div>
+                        <p className="mt-4 mx-2 text-white">{file.name}</p>
+                        <p className="text-white text-sm mb-2">
+                          Size:{file.size}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
                   {file.size > maxSize && (
                     <span className="warning">
                       File size exceeds the limit.
@@ -591,7 +603,7 @@ const ProjectFrom = (props) => {
                 </li>
               ))}
             </ul>
-            <div className="actions flex justify-center gap-4">
+            <div className="actions flex justify-end gap-4">
               <button
                 className="bg-rose-500 text-white active:bg-rose-500 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 onClick={() => setFiles(null)}
