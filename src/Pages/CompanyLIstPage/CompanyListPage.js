@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import { AiFillDelete } from "react-icons/ai";
 import {
   useTable,
   useFilters,
@@ -28,10 +29,18 @@ const CompanyListPage = () => {
   };
 
   const handleDelete = (id) => {
-    // Handle Delete button click here
-    console.log("Delete button clicked for ID:", id);
-  };
+    // Find the index of the row with the provided id
+    const index = data.findIndex((row) => row.id === id);
 
+    console.log("deleted button clicked for ID:", id);
+
+    if (index !== -1) {
+      // Remove the row from the data state
+      const updatedData = [...data];
+      updatedData.splice(index, 1);
+      setData(updatedData);
+    }
+  };
   // Define the columns
   const columns = React.useMemo(
     () => [
@@ -69,7 +78,27 @@ const CompanyListPage = () => {
           <div className="flex gap-4">
             <button onClick={() => handleView(value)}>View</button>
             <button onClick={() => handleEdit(value)}>Edit</button>
-            <button onClick={() => handleDelete(value)}>Delete</button>
+            <AiFillDelete
+              className="text-xl text-rose-500"
+              onClick={() => document.getElementById("my_modal_1").showModal()}
+            >
+              Delete
+            </AiFillDelete>
+            {/* Open the modal using ID.showModal() method */}
+            <dialog id="my_modal_1" className="modal">
+              <form method="dialog" className="modal-box">
+                <AiFillDelete className="text-5xl text-rose-500"></AiFillDelete>
+                <p className="py-4">
+                  Are you sure you want to delete this item?
+                </p>
+                <div className="modal-action">
+                  <button className="btn">Close</button>
+                  <button onClick={() => handleDelete(value)} className="btn">
+                    Ok
+                  </button>
+                </div>
+              </form>
+            </dialog>
           </div>
         ),
       },

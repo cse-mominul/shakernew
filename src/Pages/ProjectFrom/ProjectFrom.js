@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { BsFillClipboardFill } from "react-icons/bs";
+import { BsFillXCircleFill } from "react-icons/bs";
 const ProjectFrom = (props) => {
   const { register, isVisible } = props;
 
@@ -38,6 +39,10 @@ const ProjectFrom = (props) => {
   const handleFileSelect = (event) => {
     const selectedFiles = event.target.files;
     validateAndSetFiles(selectedFiles);
+  };
+  const handleDelete = (file) => {
+    const updatedFiles = files.filter((f) => f !== file);
+    setFiles(updatedFiles);
   };
 
   const validateAndSetFiles = (selectedFiles) => {
@@ -78,13 +83,11 @@ const ProjectFrom = (props) => {
       console.log(file);
     }
 
-    // Send the files to the server
-    // fetch(
-    //   "link", {
-    //     method: "POST",
-    //     body: formData
-    //   }
-    // )
+    // // Send the files to the server
+    // fetch("/data.json", {
+    //   method: "POST",
+    //   body: formData,
+    // });
   };
   return (
     <div className="my-6 mx-12">
@@ -584,14 +587,22 @@ const ProjectFrom = (props) => {
               {files.map((file, idx) => (
                 <li key={idx}>
                   <div className=" bg-rose-500">
-                    <div className="flex gap-4 justify-left my-6 mx-12">
-                      <BsFillClipboardFill className="mt-5 mx-2 text-3xl text-white"></BsFillClipboardFill>
-                      <div>
-                        <p className="mt-4 mx-2 text-white">{file.name}</p>
-                        <p className="text-white text-sm mb-2">
-                          Size:{file.size}
-                        </p>
+                    <div className="flex my-12 justify-between">
+                      <div className="flex gap-4 justify-left mx-12">
+                        <BsFillClipboardFill className="mt-5 mx-2 text-3xl text-white"></BsFillClipboardFill>
+                        <div>
+                          <p className="mt-4 mx-2 text-white">{file.name}</p>
+                          <p className="text-white text-sm mb-2">
+                            Size:{file.size / 1000} KB
+                          </p>
+                        </div>
                       </div>
+                      <BsFillXCircleFill
+                        className="text-white mx-4 text-3xl my-4"
+                        onClick={() => handleDelete(file)}
+                      >
+                        Delete
+                      </BsFillXCircleFill>
                     </div>
                   </div>
 

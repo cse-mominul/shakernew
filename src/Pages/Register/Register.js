@@ -3,17 +3,39 @@ import { useForm } from "react-hook-form";
 import ProjectFrom from "../ProjectFrom/ProjectFrom";
 
 const Register = () => {
+  // Registar Page Condition
   const [isVisible, setIsVisible] = useState(false);
-
   const {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
 
-  console.log(watch("example"));
+  // Submit Data
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      if (response.ok) {
+        console.log("Form submitted successfully");
+        reset(); // Clear input fields after successful form submission
+      } else {
+        console.log("Error occurred during form submission");
+      }
+    } catch (error) {
+      console.log("Error occurred during form submission:", error);
+    }
+  };
   return (
     <div className="my-6  bg-[#F8FAFC]  mx-12">
       <div className="py-4">
