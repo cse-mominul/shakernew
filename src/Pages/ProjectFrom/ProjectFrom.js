@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 const ProjectFrom = (props) => {
   const { register, isVisible } = props;
 
@@ -20,6 +20,71 @@ const ProjectFrom = (props) => {
     setTaxExempt(event.target.value);
   };
 
+  const [files, setFiles] = useState(null);
+  const inputRef = useRef();
+  const maxSize = 1 * 1024 * 1024; // 1MB (example size)
+
+  const handleDragOver = (event) => {
+    event.preventDefault();
+  };
+
+  const handleDrop = (event) => {
+    event.preventDefault();
+    const droppedFiles = event.dataTransfer.files;
+    validateAndSetFiles(droppedFiles);
+  };
+
+  const handleFileSelect = (event) => {
+    const selectedFiles = event.target.files;
+    validateAndSetFiles(selectedFiles);
+  };
+
+  const validateAndSetFiles = (selectedFiles) => {
+    const fileList = Array.from(selectedFiles);
+
+    // Perform size validation
+    const validFiles = fileList.filter((file) => file.size <= maxSize);
+
+    // Update state with valid files
+    setFiles(validFiles.length > 0 ? validFiles : null);
+  };
+
+  // send files to the server // learn from my other video
+  const handleUpload = () => {
+    const formData = new FormData();
+    formData.append("Files", files);
+
+    if (files && files.length > 0) {
+      // Iterate over the files and process them
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const reader = new FileReader();
+
+        reader.onload = (event) => {
+          // Get the file content
+          const fileContent = event.target.result;
+          // Perform any necessary operations with the file content
+          console.log(file.name, fileContent);
+          // You can send the file content to the server here
+        };
+
+        // Read the file as text or perform other read operations based on your requirement
+        reader.readAsText(file);
+      }
+    }
+    // Console log the files
+    for (let file of formData.entries()) {
+      console.log(file);
+    }
+
+    // Send the files to the server
+    // fetch(
+    //   "link", {
+    //     method: "POST",
+    //     body: formData
+    //   }
+    // )
+  };
   return (
     <div className="my-6 mx-12">
       <div className="py-4">
@@ -464,9 +529,19 @@ const ProjectFrom = (props) => {
       <div class="flex items-center justify-center w-full">
         <label
           for="dropzone-file"
+          onDragOver={handleDragOver}
+          onDrop={handleDrop}
           class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
         >
-          <div class="flex flex-col items-center justify-center pt-5 pb-6">
+          <div
+            type="file"
+            multiple
+            onChange={handleFileSelect}
+            hidden
+            accept=".jpg, .jpeg, .png, application/pdf" // Restrict to images and PDFs
+            ref={inputRef}
+            className="flex flex-col items-center justify-center pt-5 pb-6"
+          >
             <svg
               aria-hidden="true"
               class="w-10 h-10 mb-3 text-gray-400"
@@ -490,9 +565,49 @@ const ProjectFrom = (props) => {
               SVG, PNG, JPG or GIF (MAX. 800x400px)
             </p>
           </div>
-          <input id="dropzone-file" type="file" class="hidden" />
+          <input
+            id="dropzone-file"
+            type="file"
+            multiple
+            onChange={handleFileSelect}
+            hidden
+            accept=".jpg, .jpeg, .png, application/pdf" // Restrict to images and PDFs
+            ref={inputRef}
+          />
         </label>
       </div>
+      <>
+        {files && files.length > 0 && (
+          <div className="uploads">
+            <ul>
+              {files.map((file, idx) => (
+                <li key={idx}>
+                  {file.name}
+                  {file.size > maxSize && (
+                    <span className="warning">
+                      File size exceeds the limit.
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <div className="actions flex justify-center gap-4">
+              <button
+                className="bg-rose-500 text-white active:bg-rose-500 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                onClick={() => setFiles(null)}
+              >
+                Cancel
+              </button>
+              <button
+                className="bg-blue-700 text-white active:bg-rose-500 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                onClick={handleUpload}
+              >
+                Upload
+              </button>
+            </div>
+          </div>
+        )}
+      </>
     </div>
   );
 };
